@@ -15,7 +15,7 @@ connectDB();
 
 // ✅ Allow only your Vercel frontend URL for security
 const allowedOrigins = [
-  "https://kasun-akalanka-web.vercel.app/", // replace with your actual Vercel frontend URL
+  "https://kasun-akalanka-web.vercel.app", // replace with your actual Vercel frontend URL
   "http://localhost:5000" // optional: keep for local dev
 ];
 
