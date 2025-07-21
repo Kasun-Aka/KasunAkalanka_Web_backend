@@ -32,12 +32,14 @@ app.use(cors({
 
 // Middleware
 app.use(express.json()); // To parse JSON bodies
-app.use(express.static('public'));
+/*
+app.use(express.static(path.join(__dirname, '..', 'frontend')));
 
 // Serve frontend HTML
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+  res.sendFile(path.join(__dirname, '..', 'frontend', 'index.html'));
 });
+*/
 
 // Routes
 app.use("/api", require("./routes/messageRoutes"));
