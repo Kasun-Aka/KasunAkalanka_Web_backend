@@ -3,6 +3,7 @@ const cors = require("cors");
 const dotenv = require("dotenv");
 const connectDB = require("./config/db");
 const path = require('path');
+const healthRoutes = require("./routes/healthRoutes");
 
 // Load environment variables
 dotenv.config();
@@ -42,6 +43,7 @@ app.get('/', (req, res) => {
 */
 
 // Routes
+app.use("/api", healthRoutes); //awaking server
 app.use("/api", require("./routes/messageRoutes"));
 app.use("/api/users", require("./routes/userRoutes")); // contains /save-profile and /me
 app.use("/api", require("./routes/protectedRoutes")); // extra testing routes

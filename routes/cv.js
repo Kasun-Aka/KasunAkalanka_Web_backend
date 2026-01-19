@@ -15,7 +15,7 @@ router.get('/', async (req, res) => {
   try {
     const decodedToken = await admin.auth().verifyIdToken(idToken);
     if (decodedToken) {
-      const cvPath = path.join(__dirname, '../assets/CV.pdf');
+      const cvPath = path.join(__dirname, '../assets/K-CV.pdf');
       return res.download(cvPath);
     }
   } catch (error) {
